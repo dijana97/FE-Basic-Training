@@ -221,7 +221,7 @@ height: 300px;
   background-color: #363030;
   height: 30%;
   width: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
