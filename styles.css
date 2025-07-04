@@ -15,11 +15,11 @@ h1 {
 }
 
 .logo {
-    width: 140px;
-    height: 70px;
-    box-sizing: border-box;
-    padding: 10px;
-    display: flex;
+  width: 140px;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
 }
 
 .nav-list {
@@ -145,6 +145,7 @@ height: 300px;
 
 .read-more {
   float: right;
+  margin-top: 70px;
 
 }
 
@@ -162,16 +163,40 @@ height: 300px;
 
 .left-menu {
   background-color: #f3f3f3;
-  width:300px;
+  width:280px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin-left: 80px;
+  margin-top: 20px;
 }
 
+.btn-plus{
+  display: inline-block;
+  background-color: #979694;
+  color: rgb(255, 255, 255); 
+  border: none;
+  margin-left:130px;
+  height: 50px;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+  margin-top: -10px;
+  font-size: 30px;
+  font-weight:lighter;
+}
 .nav-list-left {
-  list-style: none;
+  background-color: #f3f3f3;
+  border: #f3f3f3 solid 1px;
+  list-style: none;;
   padding: 0;
   margin: 0;
+}
+
+.selected {
+  background-color: #f8f8f8;
+  border: #f3f3f3 solid 1px;
+  width: 240px;
 }
 
 .left-menu-item {
@@ -180,13 +205,16 @@ height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     width: 190px;
-    height: 35px;
+    height: 30px;
     border: none;
     cursor: pointer;
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 30%;
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 20px;
     color: white;
     margin-top: 4px;
+    display: flex;
 }
 
 .footer {
@@ -204,6 +232,7 @@ height: 300px;
   display: flex;
   justify-content: center;
   text-align: center;
+  color: lightgray;
 }
 
 .nav-list-footer {
@@ -214,4 +243,10 @@ height: 300px;
   line-height: 2;
   text-align: left;
   margin-right: 100px;
+}
+
+.footer-title {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
 }
