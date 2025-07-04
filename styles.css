@@ -88,8 +88,9 @@ h1 {
   width: 100%;
   padding: 20px;
   overflow-y: scroll;
+  overflow-x: hidden;
   position:relative;
-  height: 1500px;
+  height: 1200px;
 }
 
 h2{
@@ -145,7 +146,7 @@ height: 300px;
 
 .read-more {
   float: right;
-  margin-top: 70px;
+  margin-top: 5%;
 
 }
 
@@ -153,12 +154,14 @@ height: 300px;
   width: 20%;
   float: left;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .container-right {
-  width: 75%;
+  width: 70%;
   float: right;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .left-menu {
@@ -168,8 +171,26 @@ height: 300px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   display: inline-block;
-  margin-left: 80px;
+  margin-left: 40px;
   margin-top: 20px;
+}
+
+.left-menu-item {
+    background-color:#979694;
+    width: 230px;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px ;
+    border-radius: 8px;
+    height: 40px;
+    color: white;
+    padding-left: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+
 }
 
 .btn-plus{
@@ -177,49 +198,33 @@ height: 300px;
   background-color: #979694;
   color: rgb(255, 255, 255); 
   border: none;
-  margin-left:130px;
-  height: 50px;
+  margin-left:120px;
+  height: 35px;
   border-top-right-radius: 20%;
   border-bottom-right-radius: 20%;
-  margin-top: -10px;
   font-size: 30px;
   font-weight:lighter;
 }
-.nav-list-left {
-  background-color: #f3f3f3;
-  border: #f3f3f3 solid 1px;
-  list-style: none;;
-  padding: 0;
-  margin: 0;
-}
 
 .selected {
-  background-color: #f8f8f8;
-  border: #f3f3f3 solid 1px;
-  width: 240px;
+background-color: #da762a;
 }
 
-.left-menu-item {
-    background-image: url(assets/icon-burger.png); 
-    background-size: 150%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 190px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 30%;
-    text-align: left;
-    padding: 20px;
-    padding-bottom: 20px;
-    color: white;
-    margin-top: 4px;
-    display: flex;
+.nav-list-left {
+  background-color: #f8f8f8;
+  border: #f3f3f3 solid 1px;
+  width: 200px;
+  height: 100px;
+  display: block;
+  position: relative;
+  list-style: none;
 }
+
+
 
 .footer {
   background-color: #363030;
-  height: 30%;
+  height: 300px;
   width: 100%;
   position: relative;
   left: 0;
@@ -249,4 +254,8 @@ height: 300px;
   font-weight: bold;
   color: white;
   margin-bottom: 10px;
+}
+
+body {
+  overflow-x: hidden;
 }
