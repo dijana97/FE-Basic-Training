@@ -1,3 +1,7 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 header {
   background-color: lightgray;
   height: 100px;
@@ -239,8 +243,9 @@ h2 {
 }
 
 .articles {
-  width: 80%;
+  width: 90%;
   float: center;
+  margin-left: 20px;
 }
 
 .footer {
