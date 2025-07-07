@@ -142,12 +142,11 @@ h2 {
   width: 230px;
   border: none;
   cursor: pointer;
-  padding-bottom: 1px;
+  padding: 1px 20px;
   margin: 10px;
   border-radius: 8px;
   height: 40px;
   color: white;
-  padding-left: 20px;
   display: flex;
   align-items: center; 
   justify-content: flex-start;
@@ -186,7 +185,6 @@ h2 {
 }
 
 .article {
-  float:left; 
   margin: 15px;
   padding: 20px;
   background: #f3f3f3;
