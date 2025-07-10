@@ -1,0 +1,52 @@
+@use 'vars';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: vars.$background-color;
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+html {
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+main {
+  display: inline-block;
+  clear: both;
+}
+
+h1 {
+  font-size: 30px;
+  color: vars.$text-color;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  color: vars.$headings-color;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+footer {
+  background-color: vars.$footer-background-color;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  text-align:center;
+  color: vars.$white-color;
+}
