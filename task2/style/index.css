@@ -213,12 +213,11 @@ footer {
 .footer {
   display: block;
   text-align: center;
-  padding-bottom: 40px;
   overflow: hidden;
-  position: relative;
 }
 
-.footer__nav-list {
+.footer .footer__nav-list:nth-child(1),
+.footer .footer__nav-list:nth-child(2) {
   list-style: none;
   display: block;
   position: relative;
@@ -226,6 +225,12 @@ footer {
   line-height: 2;
   text-align: left;
   margin-right: 100px;
+  width: 200px;
+}
+
+.footer .footer__nav-list:nth-child(3),
+.footer .footer__nav-list:nth-child(4) {
+  display: none;
 }
 
 .footer__nav-list--title {
@@ -389,7 +394,9 @@ footer {
     justify-content: center;
     text-align: center;
   }
-  .footer__nav-list {
+  .footer__nav-list,
+  .footer .footer__nav-list:nth-child(3),
+  .footer .footer__nav-list:nth-child(4) {
     list-style: none;
     display: block;
     position: relative;
