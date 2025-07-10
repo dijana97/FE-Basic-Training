@@ -146,8 +146,22 @@
 .article__img--right {
   width: 160px;
   height: auto;
-  float: right;
   margin: -50px 0 0 10px;
+}
+
+.content__row article:nth-child(odd) .article__img--right {
+  float: right;
+}
+
+.content__row article:nth-child(even)  {
+  .article__img--right {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  h2 {
+    text-align: right;
+  }
 }
 
 .article__img--wide {
