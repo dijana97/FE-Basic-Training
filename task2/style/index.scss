@@ -1,7 +1,6 @@
 @use 'vars';
 @use 'base';
 
-
 .nav {
   text-align: center;
 }
@@ -39,7 +38,7 @@
   width: 150px;
   margin: 0px;
   background-color: vars.$white-color;
-  color: #040303;
+  color: vars.$text-color;
 }
 
 .search__img {
@@ -79,7 +78,7 @@
   padding: 0;
   margin-top: 0;
   margin-right: 20px;
-  background-color: rgb(190, 189, 189);
+  background-color: vars.$background-color-mobile;
   color: vars.$text-color;
   display: block;
 
@@ -109,9 +108,7 @@
   display: none;
 }
 
-
-
-  .article {
+.article {
   display: inline-block;
   vertical-align: top;
   margin: 15px;
@@ -178,9 +175,8 @@
   text-align: center;
   padding-bottom: 40px;
   overflow: hidden;
-  position:relative; 
+  position: relative; 
 }
-
 
 .footer__nav-list {
   list-style: none;
@@ -192,7 +188,6 @@
   margin-right: 100px;
 }
 
-
 .footer__nav-list--title {
   font-weight: bold;
   color: vars.$white-color;
@@ -201,7 +196,7 @@
 
 .footer__nav-list a:link,
 .footer__nav-list a:visited {
-  color: lightgray;  
+  color: vars.$background-color;  
   text-decoration: none;
 }
 
@@ -225,27 +220,25 @@
     }
   }
 
-
   .nav__list {
     list-style: none;
     padding: 0;
     margin-top: -30px;
     text-align: center;
     background-color: vars.$background-color;
-    color:#040303;
+    color:vars.$text-color;
 
     .nav__item {
-      border-right: 2px solid #040303;
+      border-right: 2px solid vars.$text-color;
       display: inline-block;
       padding: 0 15px;
-      color: black;
+      color: vars.$text-color;
       margin-top: 0px;
 
       a {
         text-decoration: none;
         color:vars.$text-color;
       }
-
     }
 
     .nav__item:last-child {
@@ -308,7 +301,7 @@
   .left-menu__btn{
     float: right;
     background-color: vars.$left-menu-item-color;
-    color: rgb(255, 255, 255); 
+    color: vars.$white-color; 
     border: none;
     height: 35px;
     font-size: 24px;

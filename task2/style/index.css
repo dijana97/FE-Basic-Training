@@ -81,7 +81,7 @@ footer {
   width: 150px;
   margin: 0px;
   background-color: #ffffff;
-  color: #040303;
+  color: black;
 }
 
 .search__img {
@@ -121,7 +121,7 @@ footer {
   padding: 0;
   margin-top: 0;
   margin-right: 20px;
-  background-color: rgb(190, 189, 189);
+  background-color: rgb(170, 170, 170);
   color: black;
   display: block;
 }
@@ -264,10 +264,10 @@ footer {
     margin-top: -30px;
     text-align: center;
     background-color: lightgray;
-    color: #040303;
+    color: black;
   }
   .nav__list .nav__item {
-    border-right: 2px solid #040303;
+    border-right: 2px solid black;
     display: inline-block;
     padding: 0 15px;
     color: black;
@@ -328,7 +328,7 @@ footer {
   .left-menu__btn {
     float: right;
     background-color: #979694;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     border: none;
     height: 35px;
     font-size: 24px;
