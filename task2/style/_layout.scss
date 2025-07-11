@@ -42,7 +42,7 @@
   white-space: normal;
 }
 
-.article--part-2{
+.article--part-2 {
   height: 100%;
   width:  90%;
   text-align: justify;
@@ -60,13 +60,13 @@
   margin: -50px 0 0 10px;
 }
 
-.article--right  {
+.article--right {
   .article__img--right {
     float: right;
   }
 }
 
-.article--left  {
+.article--left {
   .article__img--right {
     float: left;
     margin-right: 10px;
@@ -138,7 +138,7 @@
     overflow: hidden ;
   }
 
-  .left-menu__btn{
+  .left-menu__btn {
     float: right;
     background-color: vars.$left-menu-item-color;
     color: vars.$white-color; 
@@ -170,7 +170,7 @@
     color: vars.$text-color;
 
     a {
-      color: vars.$text-color;  
+      color: vars.$text-color;
     }
   }
 
@@ -182,7 +182,7 @@
     height: 1000px;
   }
 
-  .article--part-2{
+  .article--part-2 {
     height: 350px;
     width:  calc(45% - 20px);
   }
@@ -198,7 +198,7 @@
     float: right;
   }
 
-  .article--left  {
+  .article--left {
     .article__img--right {
       float: right;
     }
