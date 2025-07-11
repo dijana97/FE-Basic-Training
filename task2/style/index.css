@@ -178,7 +178,7 @@ footer {
   color: black;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .nav__logo img {
     box-sizing: border-box;
     margin-left: 0px;
@@ -452,7 +452,7 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .side-menu {
     display: inline-block;
     align-items: top;
