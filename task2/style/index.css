@@ -8,19 +8,14 @@ header {
 }
 
 body {
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-html body {
-  height: 100%;
   margin: 0;
+  height: 100%;
+  width: auto;
   padding: 0;
 }
 
 main {
   display: inline-block;
-  clear: both;
 }
 
 h1 {
@@ -46,6 +41,11 @@ footer {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
+}
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -56,19 +56,14 @@ header {
 }
 
 body {
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-html body {
-  height: 100%;
   margin: 0;
+  height: 100%;
+  width: auto;
   padding: 0;
 }
 
 main {
   display: inline-block;
-  clear: both;
 }
 
 h1 {
@@ -94,6 +89,11 @@ footer {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
+}
 .nav {
   text-align: center;
 }
@@ -106,7 +106,7 @@ footer {
   height: 70px;
   padding: 10px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .search {
@@ -221,19 +221,14 @@ header {
 }
 
 body {
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-html body {
-  height: 100%;
   margin: 0;
+  height: 100%;
+  width: auto;
   padding: 0;
 }
 
 main {
   display: inline-block;
-  clear: both;
 }
 
 h1 {
@@ -259,6 +254,11 @@ footer {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
+}
 .footer {
   display: block;
   text-align: center;
@@ -294,7 +294,6 @@ footer {
 
 .footer__rights {
   margin-top: 100px;
-  position: static;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -302,14 +301,12 @@ footer {
 @media screen and (min-width: 1024px) {
   .footer {
     display: inline-block;
-    justify-content: center;
   }
   .footer__nav-list,
   .footer__nav-list--desktop-only {
     list-style: none;
     display: block;
     position: relative;
-    float: left;
     line-height: 2;
     text-align: left;
     margin-right: 100px;
@@ -325,19 +322,14 @@ header {
 }
 
 body {
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-html body {
-  height: 100%;
   margin: 0;
+  height: 100%;
+  width: auto;
   padding: 0;
 }
 
 main {
   display: inline-block;
-  clear: both;
 }
 
 h1 {
@@ -363,6 +355,11 @@ footer {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
+}
 .article, .content {
   display: inline-block;
   vertical-align: top;
@@ -371,7 +368,6 @@ footer {
 .content {
   width: 100%;
   position: relative;
-  height: 2400px;
   margin-top: 0px;
 }
 
@@ -385,11 +381,25 @@ footer {
   background: #f3f3f3;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   font-size: 15px;
 }
-.article p {
-  overflow: hidden;
+.article .article__img--right {
+  display: block;
+  width: 170px;
+  height: 140PX;
+  margin: -50px 0 0 10px;
+  float: right;
+}
+
+.article__row {
+  font-size: 0;
+}
+
+.article__body {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 190px);
+  font-size: 16px;
 }
 
 .content__row {
@@ -404,19 +414,8 @@ footer {
 }
 
 .article--part-3 {
-  height: 450px;
   width: 90%;
   text-align: justify;
-}
-
-.article__img--right {
-  width: 170px;
-  height: 140PX;
-  margin: -50px 0 0 10px;
-}
-
-.article--right .article__img--right {
-  float: right;
 }
 
 .article--left .article__img--right {
@@ -427,15 +426,26 @@ footer {
   text-align: right;
 }
 
-.article--desktop {
-  display: none;
-}
-
 .article__img--wide {
   width: 100%;
   height: 170px;
   display: block;
   margin: 0 auto;
+}
+
+.article--text {
+  position: relative;
+}
+
+.article__img--stacked {
+  position: absolute;
+  width: 330px;
+  height: 170px;
+  margin: 10rem 0;
+}
+
+.article__text {
+  padding-bottom: 60vw;
 }
 
 .article__title {
@@ -521,7 +531,7 @@ footer {
     margin-left: 20px;
     margin-top: 0px;
     padding: 20px;
-    height: 1000px;
+    height: 100%;
   }
   .article--part-2 {
     height: 350px;
@@ -531,33 +541,40 @@ footer {
     height: 450px;
     width: calc(30% - 20px);
   }
-  .article__img--right {
-    width: 170px;
-    height: 140px;
-    float: right;
-  }
   .article--left .article__img--right {
     float: right;
   }
   .article--left h2 {
     text-align: left;
   }
-  .article--mobile {
-    display: none;
-  }
-  .article--desktop {
+  .article--text {
     margin: 15px;
     padding: 20px;
     background: #f3f3f3;
     text-align: left;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     display: inline-block;
     vertical-align: top;
     font-size: 15px;
     text-align: justify;
+    position: static;
   }
-  .article--desktop p {
-    overflow: hidden;
+  .article--text .article__img--right {
+    display: block;
+    width: 170px;
+    height: 140PX;
+    margin: -50px 0 0 10px;
+    float: right;
+  }
+  .article__img--stacked {
+    position: static;
+    width: 100%;
+    height: 170px;
+    display: block;
+    margin: 10px auto;
+  }
+  .article__text {
+    display: inline;
+    padding: 0;
   }
 }/*# sourceMappingURL=index.css.map */

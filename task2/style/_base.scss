@@ -10,22 +10,14 @@ header {
 }
 
 body {
-  margin: 0 auto;
-  overflow-x: hidden;
+  margin: 0;
+  height: 100%;
+  width:auto;
+  padding: 0;
 }
-
-html {
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-}
-
 
 main {
   display: inline-block;
-  clear: both;
 }
 
 h1 {
@@ -49,4 +41,10 @@ footer {
   bottom: 0;
   text-align:center;
   color: vars.$white-color;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+  }
 }
