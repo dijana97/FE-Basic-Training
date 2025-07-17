@@ -1,4 +1,5 @@
 @use 'vars';
+@use 'mixins';
 
 *, ::after, ::before {
   box-sizing: border-box;
@@ -11,7 +12,6 @@ header {
 
 body {
   margin: 0;
-  height: 100%;
   width:auto;
   padding: 0;
 }
@@ -39,11 +39,11 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-  text-align:center;
+  text-align:left;
   color: vars.$white-color;
 }
 
-@media screen and (min-width: 1024px) {
+@include mixins.screenadjust(1024px) {
   body {
     margin: 0 auto;
   }
