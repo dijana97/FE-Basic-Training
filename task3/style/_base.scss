@@ -1,0 +1,50 @@
+@use 'vars';
+@use 'mixins';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+header {
+  background-color: vars.$background-color;
+  height: 100%;
+}
+
+body {
+  width: auto;
+}
+
+main {
+  display: inline-block;
+}
+
+h1 {
+  font-size: 1.875rem;
+  color: vars.$text-color;
+  text-align: center;
+}
+
+h2 {
+  color: vars.$headings-color;
+  text-align: center;
+}
+
+footer {
+  background-color: vars.$footer-background-color;
+  position: relative;
+  text-align:left;
+  color: vars.$white-color;
+}
+
+@include mixins.screenadjust(992px) {
+  body {
+    margin: 0 auto;
+  }
+  h2 {
+    text-align: left;
+  }
+}
