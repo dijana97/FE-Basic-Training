@@ -6,6 +6,10 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: relative;
 
+  p {
+      text-align: justify;
+    }
+
   .article__img--right {
     img {
         display: block;

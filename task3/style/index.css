@@ -279,6 +279,9 @@ footer {
   position: relative;
   font-size: 15px;
 }
+.article p {
+  text-align: justify;
+}
 .article .article__img--right img {
   display: block;
   width: 12rem;
@@ -361,6 +364,9 @@ footer {
     font-size: 0.94rem;
     text-align: justify;
     position: static;
+  }
+  .article--text p {
+    text-align: justify;
   }
   .article--text .article__img--right img {
     display: block;
