@@ -295,6 +295,13 @@ footer {
   font-size: 1rem;
 }
 
+.article__img--left img {
+  display: block;
+  width: 12rem;
+  height: 9rem;
+  float: left;
+}
+
 .article__img--wide img {
   width: 100%;
   height: 11rem;
@@ -341,7 +348,7 @@ footer {
   .item--opened {
     background-color: #da762a;
   }
-  .article--left img .article__img--right {
+  .article__img--left img {
     float: right;
   }
   .article--text {
