@@ -47,7 +47,7 @@ footer {
   color: #ffffff;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 992px) {
   body {
     margin: 0 auto;
   }
@@ -99,7 +99,7 @@ footer {
   color: #ffffff;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 992px) {
   body {
     margin: 0 auto;
   }
@@ -184,7 +184,7 @@ footer {
   color: #ffffff;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 992px) {
   body {
     margin: 0 auto;
   }
@@ -252,7 +252,7 @@ footer {
   color: #ffffff;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 992px) {
   body {
     margin: 0 auto;
   }

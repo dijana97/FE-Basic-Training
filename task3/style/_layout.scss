@@ -71,7 +71,6 @@
   position: absolute;
   bottom: 0.625rem;
   right: 0.625rem;
-
 }
 
 .content__articles {
@@ -79,7 +78,6 @@
 }
 
 @include screenadjust(992px) {
-
   .left-menu__btn {
     float: right;
     color: vars.$white-color; 

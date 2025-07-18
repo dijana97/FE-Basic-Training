@@ -40,7 +40,7 @@ footer {
   color: vars.$white-color;
 }
 
-@include mixins.screenadjust(62rem) {
+@include mixins.screenadjust(992px) {
   body {
     margin: 0 auto;
   }
