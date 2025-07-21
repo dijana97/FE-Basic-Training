@@ -279,9 +279,6 @@ footer {
   position: relative;
   font-size: 15px;
 }
-.article p {
-  text-align: justify;
-}
 .article .article__img--right img {
   display: block;
   width: 12rem;
@@ -296,6 +293,7 @@ footer {
 .article__body {
   width: calc(100% - 13rem);
   font-size: 1rem;
+  display: block;
 }
 
 .article__img--left img {
@@ -351,8 +349,12 @@ footer {
   .item--opened {
     background-color: #da762a;
   }
-  .article__img--left img {
+  .article__img--left {
     float: right;
+    text-align: center;
+  }
+  .article__img--left img {
+    display: block;
   }
   .article--text {
     background: #f3f3f3;
@@ -364,9 +366,6 @@ footer {
     font-size: 0.94rem;
     text-align: justify;
     position: static;
-  }
-  .article--text p {
-    text-align: justify;
   }
   .article--text .article__img--right img {
     display: block;

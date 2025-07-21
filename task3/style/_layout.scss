@@ -27,6 +27,7 @@
 .article__body {
   width: calc(100% - 13rem);
   font-size: 1rem;
+  display: block;
 }
 
   .article__img--left {
@@ -90,8 +91,11 @@
   }
 
   .article__img--left {
+    float: right;
+    text-align: center;
+
     img {
-        float: right;
+      display: block;
     }
   }
 
