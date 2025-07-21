@@ -17,17 +17,18 @@
           <div class="navbar-brand"><img src="assets/logo.png" alt="EXLRT Logo" height="50"></div>
           <div class="navbar-collapse justify-content-center me-sm-5" id="navbarSupportedContent">
               <ul class="nav__list mt-n4 navbar-nav">
-                <li class="nav-item nav__item"><a class="nav-link" href="#">Platform and Services</a></li>
-                <li class="nav-item nav__item"><a class="nav-link" href="#">About Us</a></li>
-                <li class="nav-item nav__item"><a class="nav-link" href="#">Careers</a></li>
-                <li class="nav-item nav__item"><a class="nav-link" href="#">Clients</a></li>
-                <li class="nav-item nav__item"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item nav__item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav__item"><a href="#">Platform and Services</a></li>
+                <li class="nav__item"><a href="#">About Us</a></li>
+                <li class="nav__item"><a href="#">Careers</a></li>
+                <li class="nav__item"><a href="#">Clients</a></li>
+                <li class="nav__item"><a href="#">Blog</a></li>
+                <li class="nav__item"><a href="#">Contact</a></li>
               </ul>
             </div>
             <div>
               <form class="d-flex" role="search">
-                  <input class="form-control rounded-end-0 border-0" type="search" placeholder="Search" aria-label="Search" label="Search">
+                  <label for="search-input" class="d-none">Search</label>
+                  <input class="form-control rounded-end-0 border-0" type="search" placeholder="Search" id="search-input">
                   <button class="btn search__img rounded-start-0" type="submit"></button>
               </form>
             </div>
@@ -71,7 +72,7 @@
           <div class="col-12 col-md-6 my-2">
             <article class="article article--left my-2  h-100 d-flex flex-column">
               <h2 class="ms-md-5 ms-sm-0">Turkish Airlines</h2>
-              <div class="article__row">
+              <div class="article__row clearfix">
                 <div class="article__img--left pe-4 me-2 mb-4"><img src="assets/turkish/image-turkish.jpg" alt="Turkish Airlines"></div>
                   <h3 class="fs-5">Case Study</h3>
                   <p class="fs-6">Turkish Airlines is the national airline of Turkey and flies to more than 200

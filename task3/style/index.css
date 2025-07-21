@@ -136,6 +136,16 @@ footer {
     display: inline-block;
     padding: 0 15px;
   }
+  .nav__list .nav__item a {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    background: none;
+    border: 0;
+  }
   .nav__list .nav__item:last-child {
     border-right: 0;
   }
@@ -293,7 +303,6 @@ footer {
 .article__body {
   width: calc(100% - 13rem);
   font-size: 1rem;
-  display: block;
 }
 
 .article__img--left img {

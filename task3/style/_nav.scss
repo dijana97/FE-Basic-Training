@@ -33,6 +33,17 @@
       border-right: 1px solid vars.$text-color;
       display: inline-block;
       padding: 0 15px;
+
+      a {
+        display: block;
+        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+        font-size: var(--bs-nav-link-font-size);
+        font-weight: var(--bs-nav-link-font-weight);
+        color: var(--bs-nav-link-color);
+        text-decoration: none;
+        background: none;
+        border: 0;
+      }
     }
 
     .nav__item:last-child {
