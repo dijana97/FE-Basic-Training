@@ -1,0 +1,83 @@
+@use 'vars';
+@use 'mixins';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: vars.$background-color;
+  height: 100%;
+  grid-area: header1;
+}
+
+body {
+  margin: 0;
+  width:auto;
+  padding: 0;
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows:1fr;  
+  grid-template-columns:1fr; 
+  grid-template-areas:
+    "header1"
+    "main1"
+    "footer1";
+}
+
+main {
+  grid-area: main1;
+  display: grid;
+  grid-template-areas:
+  "title"
+  "content";
+  grid-template-columns:1fr;
+}
+
+h1 {
+  font-size: 30px;
+  color: vars.$text-color;
+  text-align: center;
+  grid-area: title;
+}
+
+h2 {
+  font-size: 20px;
+  color: vars.$headings-color;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+footer {
+  background-color: vars.$footer-background-color;
+  left: 0;
+  bottom: 0;
+  text-align:left;
+  color: vars.$white-color;
+  grid-area: footer1;
+}
+
+@include mixins.screenadjust(1024px) {
+  body {
+    margin: 0 auto;
+  }
+  .grid-container {
+    grid-template-rows: 60px 1fr 400px;  
+    grid-template-columns:1fr; 
+    grid-template-areas:
+      "header1"
+      "main1"
+      "footer1";
+  }
+
+
+  main {
+    grid-template-areas:
+    "title title title"
+    "side-menu content .";
+    grid-template-columns: 23% 1fr 10%;
+  }
+}
