@@ -1,0 +1,28 @@
+@use 'vars';
+
+@mixin article {
+  background: vars.$left-menu-background-color;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+
+  .article__img--right {
+    img {
+        display: block;
+        width: 12rem;
+        height: 9rem;
+        float: right;
+    }
+  }
+}
+
+@mixin screenadjust($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+%position {
+  display: inline-block;
+  vertical-align: top;
+}
