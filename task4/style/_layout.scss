@@ -190,14 +190,14 @@
   }
 
   .article--left {
-  .article__col {
-    grid-column: 1;
-  }
+    .article__col {
+      grid-column: 1;
+    }
 
-  .article__img--right {
-    grid-column: 2;
+    .article__img--right {
+      grid-column: 2;
+    }
   }
-}
 
   .article--part-3 {
     height: auto;
