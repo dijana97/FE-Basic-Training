@@ -72,7 +72,7 @@
 .article__img--stacked {
   img {
     position: absolute;
-    width: 330px;
+    width: 350px;
     height: 170px;
     margin: 10rem 0;
   }
@@ -88,8 +88,8 @@
 }
 
 .article__read-more {
-   grid-column: -3 / -1;
-   text-align: right;
+  grid-column: -3 / -1;
+  text-align: right;
 }
 
 @include screenadjust(1024px) {
@@ -130,7 +130,7 @@
   .left-menu__btn {
     float: right;
     background-color: vars.$left-menu-item-color;
-    color: vars.$white-color; 
+    color: vars.$white-color;
     border: none;
     height: 35px;
     font-size: 24px;
