@@ -20,8 +20,7 @@ body {
 .grid-container {
   height: 100vh;
   display: grid;
-  grid-template-rows:1fr;  
-  grid-template-columns:1fr; 
+  grid-template-columns: 1fr;
   grid-template-areas:
     "header1"
     "main1"
@@ -34,7 +33,7 @@ main {
   grid-template-areas:
   "title"
   "content";
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
 }
 
 h1 {
@@ -65,14 +64,12 @@ footer {
     margin: 0 auto;
   }
   .grid-container {
-    grid-template-rows: 60px 1fr 400px;  
-    grid-template-columns:1fr; 
+    grid-template-rows: 60px 1fr 400px;
     grid-template-areas:
       "header1"
       "main1"
       "footer1";
   }
-
 
   main {
     grid-template-areas:
