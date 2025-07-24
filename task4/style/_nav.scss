@@ -1,0 +1,133 @@
+@use 'vars';
+@use 'mixins';
+@use 'base';
+
+.nav {
+  text-align: center;
+}
+
+.nav__logo {
+  img {
+    display: inline;
+    vertical-align: top;
+    margin-left: 250px;
+    width: 140px;
+    height: 70px;
+    padding: 10px;
+    object-fit: contain;
+  }
+}
+
+.search {
+  position: relative;
+  margin-bottom: 5px;
+  display: inline-block;
+  align-items: center;
+  font-size: 0;
+
+  .search__input,
+  .search__img {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+  }
+}
+
+.search__input {
+  border: none;
+  padding: 10px;
+  width: 300px;
+  background-color: vars.$white-color;
+  color: vars.$text-color;
+}
+
+.search__img {
+  background-image: url(../assets/icon-search.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: vars.$white-color;
+}
+
+.nav__burger {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    background-color: vars.$background-color;
+  }
+}
+
+.nav__list {
+  text-align: left;
+  list-style: none;
+  margin-right: 20px;
+  background-color: vars.$background-color-mobile;
+  color: vars.$text-color;
+  display: block;
+
+  .nav__item {
+    padding: 10px 0;
+    margin-left:5px;
+    color: vars.$text-color;
+
+    a {
+      text-decoration: none;
+      color:vars.$text-color;
+    }
+  }
+}
+
+@include screenadjust(1024px) {
+  .nav__logo {
+    img {
+      box-sizing: border-box;
+      margin-left: 0px;
+      display: block;
+    }
+  }
+
+  .nav__list {
+    list-style: none;
+    margin-top: -30px;
+    text-align: center;
+    background-color: vars.$background-color;
+
+    .nav__item {
+      border-right: 2px solid vars.$text-color;
+      display: inline-block;
+      padding: 0 15px;
+      margin-top: 0px;
+    }
+
+    .nav__item:last-child {
+      border-right:0;
+    }
+  }
+
+  .search {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .search__input {
+    width: 150px;
+  }
+
+  .nav__burger {
+    display: none;
+  }
+}
