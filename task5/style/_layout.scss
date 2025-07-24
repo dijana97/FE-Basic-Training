@@ -13,7 +13,6 @@
 
 .article {
   @include article();
-  @extend %position;
   font-size: 15px;
 }
 
@@ -213,6 +212,7 @@
 
   .content__row {
     flex-direction: row;
+    gap: 0.5rem;
   }
 
   .article--part-2 {
