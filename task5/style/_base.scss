@@ -1,0 +1,60 @@
+@use 'vars';
+@use 'mixins';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: vars.$background-color;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width:auto;
+  padding: 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 30px;
+  color: vars.$text-color;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  color: vars.$headings-color;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+footer {
+  background-color: vars.$footer-background-color;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  text-align:left;
+  color: vars.$white-color;
+}
+
+@include mixins.screenadjust(1024px) {
+  body {
+    margin: 0 auto;
+  }
+
+  .main-layout {
+    flex-direction: row;
+  }
+}
