@@ -17,7 +17,13 @@ body {
 }
 
 main {
-  display: inline-block;
+  padding: 1rem;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 h1 {
@@ -46,5 +52,9 @@ footer {
 @include mixins.screenadjust(1024px) {
   body {
     margin: 0 auto;
+  }
+
+  .main-layout {
+    flex-direction: row;
   }
 }
