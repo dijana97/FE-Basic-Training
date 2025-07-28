@@ -12,7 +12,7 @@
       <a href="#main" class="skip-link">Skip to main</a>
       <nav aria-label="site">
         <button class="nav__burger"><img src="assets/icon-burger.png" alt="EXLRT Burger"></button>
-        <div class="nav__logo"><img src="assets/logo.png" alt=""></div>
+        <div class="nav__logo"><a href="/" aria-label="Homepage"><img src="assets/logo.png" alt=""></a></div>
         <div class="nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="#">Platform and Services</a></li>
@@ -25,8 +25,9 @@
           </div>
           <div>
             <form class="search">
-                <input type="text" class="search__input" placeholder="Search">
-                <button class="search__img" type="submit"></button>
+                <label for="search-input" class="visualyHidden">Search this site</label>
+                <input type="text" id="search-input" class="search__input" placeholder="Search" required aria-invalid="true">
+                <button aria-label="Submit search" class="search__img" type="submit"></button>
             </form>
           </div>
       </nav>
