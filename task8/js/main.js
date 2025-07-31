@@ -31,7 +31,7 @@ $(function() {
         $submenuTitle.addClass("item--opened");
         $button.addClass("item--opened");
 
-      $button.text('-');
+        $button.text('-');
     } else if ($submenuOpened.length) {
       $submenuOpened.slideUp(200)
         .removeClass('left-menu__item--opened')
@@ -40,7 +40,7 @@ $(function() {
         $submenuTitle.removeClass("item--opened");
         $button.removeClass("item--opened");
 
-      $button.text('+');
+        $button.text('+');
     }
   });
 });
