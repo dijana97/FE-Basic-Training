@@ -5,7 +5,7 @@ function evenArticlesHeight() {
 
     $articles.css('height', 'auto');
 
-    $articles.each(function (i) {
+    $articles.each(function () {
       const h = $(this).outerHeight();
       if (h > maxHeight) maxHeight = h;
     });
