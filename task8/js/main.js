@@ -16,8 +16,9 @@ function evenArticlesHeight() {
 function openCloseSideMenu() {
   $('.left-menu__btn').on('click', function () {
     const $button = $(this);
-    const $submenu = $button.siblings('ul');
-    const $submenuTitle = $button.siblings('.left-menu__item');
+    const $listItem = $button.closest('li');
+    const $submenu = $listItem.find('ul').first();
+    const $submenuTitle = $listItem.find('.left-menu__item');
 
     const isOpened = $submenu.hasClass('left-menu__item--opened');
 
@@ -33,12 +34,30 @@ function openCloseSideMenu() {
   });
 }
 
+async function fetchUsers() {
+  try {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    console.log('Users:', response.data);
+  } catch (error) {
+    console.error('Error fetching users:', error);
+  }
+}
+
+
 function init() {
   evenArticlesHeight();
   openCloseSideMenu();
+  fetchUsers();
+
+  
 }
 
 $(function() {
   init();
-  
+
+  let resizeTimer;
+  $(window).on('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(evenArticlesHeight, 150);
+  });
 });

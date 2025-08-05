@@ -420,7 +420,6 @@ footer {
 }
 
 .article--part-2 {
-  height: 100%;
   width: 90%;
   text-align: justify;
 }
@@ -495,24 +494,27 @@ footer {
   .left-menu ul li {
     list-style: none;
   }
+  .left-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 10px;
+  }
   .left-menu__item {
     background-color: #979694;
     width: 170px;
     border: none;
     cursor: pointer;
-    padding: 1px 20px;
+    padding: 0px 10px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     height: 40px;
     color: #ffffff;
-    line-height: 38px;
-    position: relative;
-    overflow: hidden;
-    display: inline-flex;
-    margin-bottom: 10px;
+    line-height: 40px;
+    flex: 1;
   }
   .left-menu__btn {
-    float: right;
     background-color: #979694;
     color: #ffffff;
     border: none;
