@@ -13,34 +13,32 @@ function evenArticlesHeight() {
     $articles.height(maxHeight);
   });
 }
-
-$(function() {
-  evenArticlesHeight();
-
-  $('.left-menu__btn').on('click', function (i) {
+function openCloseSideMenu() {
+  $('.left-menu__btn').on('click', function () {
     const $button = $(this);
-    const $submenuOpened = $button.siblings('.left-menu__item--opened');
-    const $submenuClosed = $button.siblings('.left-menu__item--closed');
+    const $submenu = $button.siblings('ul');
     const $submenuTitle = $button.siblings('.left-menu__item');
 
-    if ($submenuClosed.length) {
-      $submenuClosed.slideDown(200)
-        .removeClass('left-menu__item--closed')
-        .addClass('left-menu__item--opened');
+    const isOpened = $submenu.hasClass('left-menu__item--opened');
 
-        $submenuTitle.addClass("item--opened");
-        $button.addClass("item--opened");
-
-        $button.text('-');
-    } else if ($submenuOpened.length) {
-      $submenuOpened.slideUp(200)
-        .removeClass('left-menu__item--opened')
-        .addClass('left-menu__item--closed');
-
-        $submenuTitle.removeClass("item--opened");
-        $button.removeClass("item--opened");
-
-        $button.text('+');
+    if (isOpened) {
+      $submenu.slideUp(200).removeClass('left-menu__item--opened');
+      $submenuTitle.removeClass('item--opened');
+      $button.removeClass('item--opened').text('+');
+    } else {
+      $submenu.slideDown(200).addClass('left-menu__item--opened');
+      $submenuTitle.addClass('item--opened');
+      $button.addClass('item--opened').text('-');
     }
   });
+}
+
+function init() {
+  evenArticlesHeight();
+  openCloseSideMenu();
+}
+
+$(function() {
+  init();
+  
 });
