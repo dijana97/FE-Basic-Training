@@ -43,21 +43,22 @@ async function fetchUsers() {
   }
 }
 
-
-function init() {
-  evenArticlesHeight();
-  openCloseSideMenu();
-  fetchUsers();
-
-  
-}
-
-$(function() {
-  init();
-
+function resizer () {
   let resizeTimer;
   $(window).on('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(evenArticlesHeight, 150);
   });
+}
+
+
+function init() {
+  evenArticlesHeight();
+  openCloseSideMenu();
+  fetchUsers();
+  resizer();
+}
+
+$(function() {
+  init();
 });
