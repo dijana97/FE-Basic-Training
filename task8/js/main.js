@@ -51,7 +51,6 @@ function resizer () {
   });
 }
 
-
 function init() {
   evenArticlesHeight();
   openCloseSideMenu();
