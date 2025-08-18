@@ -1,3 +1,27 @@
+fetch("footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("footer").innerHTML = html;
+    });
+
+fetch("header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header").innerHTML = html;
+
+    const burger = document.querySelector('.nav__burger');
+    const navList = document.querySelector('.nav__list');
+    const search = document.querySelector('.search');
+
+    if (burger && navList && search) {
+      burger.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        search.classList.toggle('active');
+        burger.classList.toggle('active');
+      });
+    }
+  });
+
 function openCloseSideMenu() {
   const buttons = document.querySelectorAll('.left-menu__btn');
 
@@ -30,15 +54,5 @@ function openCloseSideMenu() {
 
 document.addEventListener('DOMContentLoaded', () => {
   openCloseSideMenu();
+});
 
-  const burger = document.querySelector('.nav__burger');
-  const navList = document.querySelector('.nav__list');
-  const search = document.querySelector('.search');
-
-  if (burger && navList && search) {
-    burger.addEventListener('click', () => {
-    navList.classList.toggle('active');
-    search.classList.toggle('active');
-    burger.classList.toggle('active');
-  })
-}});

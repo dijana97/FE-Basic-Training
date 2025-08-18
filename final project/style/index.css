@@ -773,27 +773,27 @@ footer {
     justify-content: space-between;
   }
 }
-.article-page {
+.content-article {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-.article-page h2 {
+.content-article h2 {
   order: 1;
 }
 
-.article-page-img {
+.content-article__image {
   order: 2;
   width: 100%;
   max-width: 18.75rem;
 }
-.article-page-img img {
+.content-article__image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.article__history {
+.content-article__history {
   order: 3;
 }
 
@@ -865,13 +865,6 @@ footer {
     justify-content: space-between;
   }
 }
-.contact-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contact {
   min-height: 70vh;
   width: min(90vw, 1200px);
@@ -882,16 +875,23 @@ footer {
   box-shadow: 0 0.2rem 0.5rem #000000;
 }
 
-.map, .contact-form {
+.contact-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__map, .contact__form {
   flex: 1 1 18.75rem;
 }
 
-.map {
+.contact__map {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
 }
-.map iframe {
+.contact__map iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -901,20 +901,20 @@ footer {
   display: block;
 }
 
-.contact-form {
+.contact__form {
   background-color: lightgrey;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 2rem;
 }
-.contact-form form {
+.contact__form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
 }
-.contact-form::before {
+.contact__form::before {
   position: absolute;
   top: 10%;
   left: -2.8rem;
@@ -924,7 +924,7 @@ footer {
   border: 1.4rem solid transparent;
   border-right: 1.4rem solid darkgrey;
 }
-.contact-form input, .contact-form textarea {
+.contact__form input, .contact__form textarea {
   width: 100%;
   padding: 1rem;
   border: 0.08rem solid white;
@@ -933,11 +933,11 @@ footer {
   color: #000000;
   font-size: 1rem;
 }
-.contact-form textarea {
+.contact__form textarea {
   height: 6rem;
   resize: none;
 }
-.contact-form button {
+.contact__form button {
   background-color: whitesmoke;
   padding: 1rem 2rem;
   color: black;
@@ -946,19 +946,19 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.contact-form:hover, .contact-form:focus {
+.contact__form:hover, .contact__form:focus {
   background-color: #e0e0e0;
   outline: none;
 }
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form button:focus {
+.contact__form input:focus,
+.contact__form textarea:focus,
+.contact__form button:focus {
   outline: 0.125rem solid black;
   outline-offset: 0.125rem;
 }
-.contact-form s input,
-.contact-form textarea,
-.contact-form button {
+.contact__form input,
+.contact__form textarea,
+.contact__form button {
   margin-top: 0.8rem;
 }
 

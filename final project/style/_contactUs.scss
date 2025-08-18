@@ -2,13 +2,6 @@
 @use 'mixins';
 @use 'base';
 
-.contact-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-}
-
 .contact {
   min-height: 70vh;
   width: min(90vw, 1200px);
@@ -19,11 +12,18 @@
   box-shadow: 0 .2rem .5rem #000000;
 }
 
-.map, .contact-form {
+.contact-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.contact__map, .contact__form {
   flex: 1 1 18.75rem;
 }
 
-.map {
+.contact__map {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -39,7 +39,7 @@
   }
 }
 
-.contact-form {
+.contact__form {
   background-color: lightgrey;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@
   button:focus {
     outline: 0.125rem solid black;
     outline-offset: 0.125rem;
-  }s
+  }
 
   input,
   textarea,
@@ -111,7 +111,6 @@
 
 @include screenadjust(64rem) {
   .contact {
-  flex-direction: row;
+    flex-direction: row;
   }
-
 }
