@@ -5,16 +5,16 @@
 
 .nav {
   text-align: center;
-  width: 300px;
+  width: 18.75rem;
 }
 
 .nav__logo {
   img {
     vertical-align: top;
-    margin-left: 250px;
-    width: 140px;
-    height: 70px;
-    padding: 10px;
+    margin-left: 15.625rem;
+    width: 8.75rem;
+    height: 4.375rem;
+    padding: 0.625rem;
     object-fit: contain;
   }
 }
@@ -32,32 +32,32 @@
 
 .search {
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
   align-items: center;
   font-size: 0;
 
   .search__input,
   .search__img {
     vertical-align: middle;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 .search__input {
   border: none;
-  padding: 10px;
-  width: 300px;
+  padding: 0.625rem;
+  width: 18.75rem;
   background-color: vars.$white-color;
   color: vars.$text-color;
 }
 
 .search__img {
-  background-image: url(../assets/icon-search.png);
+  background-image: url(../../task8/assets/icon-search.png);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 30px;
-  height: 35px;
+  width: 1.875rem;
+  height: 2.313rem;
   border: none;
   cursor: pointer;
   background-color: vars.$white-color;
@@ -65,16 +65,16 @@
 
 .nav__burger {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 10px;
+  top: 0.938rem;
+  left: 0.938rem;
+  padding: 0.625rem;
   border: none;
   background: none;
   cursor: pointer;
 
   img {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     object-fit: contain;
     background-color: vars.$background-color;
   }
@@ -91,7 +91,7 @@
   color: vars.$text-color;
 
   .nav__item {
-    padding: 10px 0;
+    padding: 0.625rem 0;
     color: vars.$text-color;
 
     a {
@@ -101,14 +101,14 @@
   }
 }
 
-@include screenadjust(1024px) {
+@include screenadjust(64rem) {
   .nav {
       width: auto;
   }
   .nav__logo {
     img {
       box-sizing: border-box;
-      margin-left: 0px;
+      margin-left: 0rem;
       display: block;
     }
   }
@@ -121,10 +121,10 @@
     background-color: vars.$background-color;
 
     .nav__item {
-      border-right: 2px solid vars.$text-color;
+      border-right: 0.125rem solid vars.$text-color;
       display: inline-block;
-      padding: 0 15px;
-      margin-top: 0px;
+      padding: 0 0.938rem;
+      margin-top: 0rem;
     }
 
     .nav__item:last-child {
@@ -139,7 +139,7 @@
   }
 
   .search__input {
-    width: 150px;
+    width: 9.375rem;
   }
 
   .nav__burger {
