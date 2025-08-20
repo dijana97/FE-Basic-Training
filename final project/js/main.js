@@ -1,25 +1,3 @@
-function loadIncludes() {
-  const headerPromise = fetch("header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header").innerHTML = html;
-    });
-
-  const footerPromise = fetch("footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    });
-
-  headerPromise.then(() => {
-    initMobileNavigation();
-    openCloseSideMenu();
-    initSearch();
-  });
-
-  return Promise.all([headerPromise, footerPromise]);
-}
-
 function initMobileNavigation() {
   const burger = document.querySelector('.nav__burger');
   const navList = document.querySelector('.nav__list');
@@ -83,6 +61,8 @@ function openCloseSideMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadIncludes();
+  initMobileNavigation();
+  openCloseSideMenu();
+  initSearch();
 });
 

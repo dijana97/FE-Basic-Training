@@ -9,21 +9,12 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  box-shadow: 0 .2rem .5rem #000000;
-}
-
-.contact-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-}
-
-.contact__map, .contact__form {
-  flex: 1 1 18.75rem;
+  box-shadow: 0 .2rem .5rem vars.$text-color;
+  margin: auto; 
 }
 
 .contact__map {
+  flex: 1 1 18.75rem;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -39,19 +30,14 @@
   }
 }
 
-.contact__form {
-  background-color: lightgrey;
+.contact-form {
+  flex: 1 1 18.75rem;
+  background-color: vars.$background-color;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   padding: 2rem;
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: relative;
-  }
+  position: relative;
+  gap: 1rem;
 
   &::before {
     position: absolute;
@@ -61,51 +47,56 @@
     width: 0;
     height: 0;
     border: 1.4rem solid transparent;
-    border-right: 1.4rem solid darkgrey;
+    border-right: 1.4rem solid vars.$left-menu-item-color;
   }
 
-  input, textarea {
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input,
+  &__textarea {
     width: 100%;
     padding: 1rem;
-    border: .08rem solid white;
+    border: .08rem solid vars.$left-menu-background-color;
     border-radius: 2rem;
     background-color: transparent;
     color: #000000;
     font-size: 1rem;
+    margin-top: 0.8rem;
+
+    &:focus {
+      outline: 0.125rem solid vars.$hover-color;
+      outline-offset: 0.125rem;
+    }
   }
 
-  textarea {
+  &__textarea {
     height: 6rem;
     resize: none;
   }
 
-  button {
-    background-color: whitesmoke;
+  &__button {
+    background-color: vars.$nav-color;
     padding: 1rem 2rem;
     color: black;
     border-radius: 2rem;
-    border:none;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #e0e0e0;
-    outline: none;
-  }
-
-  input:focus,
-  textarea:focus,
-  button:focus {
-    outline: 0.125rem solid black;
-    outline-offset: 0.125rem;
-  }
-
-  input,
-  textarea,
-  button {
     margin-top: 0.8rem;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: vars.$hover-color;
+      outline: none;
+    }
+
+    &:focus {
+      outline: 0.125rem solid vars.$text-color;
+      outline-offset: 0.125rem;
+    }
   }
 }
 
