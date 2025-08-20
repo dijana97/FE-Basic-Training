@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -352,7 +353,7 @@ footer nav {
   display: none;
 }
 
-h4 {
+х4 {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 0.625rem;

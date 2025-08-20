@@ -60,9 +60,25 @@ function openCloseSideMenu() {
   });
 }
 
+ function initMap() {
+    const exlrtOffice = { lat: 45.23671140852559, lng: 19.816890630685112 };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: exlrtOffice,
+    });
+
+    new google.maps.Marker({
+      position: exlrtOffice,
+      map: map,
+      title: "EXLRT Office",
+    });
+  }
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
   openCloseSideMenu();
   initSearch();
+  initMap();
 });
 
