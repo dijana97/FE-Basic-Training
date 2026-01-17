@@ -1,0 +1,29 @@
+@use 'vars';
+@use 'mixins';
+@use 'base';
+
+.content-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  h2 {
+    order: 1;
+  }
+}
+
+.content-article__image {
+  order: 2;
+  width: 100%;
+  max-width: 18.75rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.content-article__history {
+  order: 3;
+}

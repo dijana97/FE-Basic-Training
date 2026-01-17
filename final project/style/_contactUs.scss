@@ -1,0 +1,107 @@
+@use 'vars';
+@use 'mixins';
+@use 'base';
+
+.contact {
+  min-height: 70vh;
+  width: min(90vw, 75rem);
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-shadow: 0 .2rem .5rem vars.$text-color;
+  margin: auto; 
+}
+
+.contact__map {
+  flex: 1 1 18.75rem;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+}
+
+.contact-form {
+  flex: 1 1 18.75rem;
+  background-color: vars.$background-color;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  gap: 1rem;
+
+  &::before {
+    position: absolute;
+    top: 10%;
+    left: -2.8rem;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 1.4rem solid transparent;
+    border-right: 1.4rem solid vars.$left-menu-item-color;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 1rem;
+    border: .08rem solid vars.$left-menu-background-color;
+    border-radius: 2rem;
+    background-color: transparent;
+    color: #000000;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+
+    &:focus {
+      outline: 0.125rem solid vars.$hover-color;
+      outline-offset: 0.125rem;
+    }
+  }
+
+  &__textarea {
+    height: 6rem;
+    resize: none;
+  }
+
+  &__button {
+    background-color: vars.$nav-color;
+    padding: 1rem 2rem;
+    color: black;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: vars.$hover-color;
+      outline: none;
+    }
+
+    &:focus {
+      outline: 0.125rem solid vars.$text-color;
+      outline-offset: 0.125rem;
+    }
+  }
+}
+
+@include screenadjust(64rem) {
+  .contact {
+    flex-direction: row;
+  }
+}

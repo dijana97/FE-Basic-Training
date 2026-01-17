@@ -1,0 +1,84 @@
+function initMobileNavigation() {
+  const burger = document.querySelector('.nav__burger');
+  const navList = document.querySelector('.nav__list');
+  const search = document.querySelector('.search');
+
+  if (burger && navList && search) {
+    burger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      search.classList.toggle('active');
+      burger.classList.toggle('active');
+    });
+  }
+}
+
+function initSearch() {
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.querySelector('.search__img');
+  const articles = document.querySelectorAll('.article');
+
+  if (!searchInput || !searchButton || articles.length === 0) return;
+
+  searchButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const query = searchInput.value.toLowerCase().trim();
+
+    articles.forEach(article => {
+      const text = article.textContent.toLowerCase();
+      article.style.display = text.includes(query) ? '' : 'none';
+    });
+  });
+}
+
+function openCloseSideMenu() {
+  const buttons = document.querySelectorAll('.left-menu__btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const listItem = button.closest('li');
+      const submenu = listItem.querySelector('ul');
+      const submenuTitle = listItem.querySelector('.left-menu__item');
+
+      const isOpened = submenu.classList.contains('left-menu__item--opened');
+
+      if (isOpened) {
+        submenu.style.display = 'none';
+        submenu.classList.remove('left-menu__item--opened');
+        submenuTitle.classList.remove('item--opened');
+        button.classList.remove('item--opened');
+        button.textContent = '+';
+        button.setAttribute('aria-expanded', 'false');
+      } else {
+        submenu.style.display = 'block';
+        submenu.classList.add('left-menu__item--opened');
+        submenuTitle.classList.add('item--opened');
+        button.classList.add('item--opened');
+        button.textContent = '-';
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+function initMap() {
+  const exlrtOffice = { lat: 45.23671140852559, lng: 19.816890630685112 };
+
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: exlrtOffice,
+  });
+
+  new google.maps.Marker({
+    position: exlrtOffice,
+    map: map,
+    title: "EXLRT Office",
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileNavigation();
+  openCloseSideMenu();
+  initSearch();
+  initMap();
+});
+
